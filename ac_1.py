@@ -18,8 +18,6 @@ c = int(input("Informe o parâmetro c da equação: "))
 print("A primeira raiz da equação é: ", (-b + ((b ** 2) - 4 * a * c) ** 0.5) / (2 * a))
 print("A segunda raiz da equação é: ", (-b - (b ** 2 - 4 * a * c) ** 0.5) / (2 * a))
 
-
-
 print("-" * 40)
 
 """
