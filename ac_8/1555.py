@@ -1,9 +1,16 @@
 def r(x, y):
-    ((3 * x) ** 2) + (y ** 2)
+    return ((3 * int(x)) ** 2) + (int(y) ** 2)
 def b(x, y):
-    (2*(x ** 2)) + ((5 * y) ** 2)
+    return (2*(int(x) ** 2)) + ((5 * int(y)) ** 2)
 def c(x, y):
-    (-100 * x) + (y ** 3)
+    return (-100 * int(x)) + (int(y) ** 3)
+def maior(x, y):
+    if max(r(x, y), b(x, y), c(x, y)) == r(x,y):
+        return "Rafael ganhou"
+    elif max(r(x, y), b(x, y), c(x, y)) == b(x, y):
+        return "Beto ganhou"
+    elif max(r(x, y), b(x, y), c(x, y)) == c(x, y):
+        return "Carlos ganhou"
 
 def main():
     num = int(input())
@@ -11,7 +18,7 @@ def main():
         num -=1
         nums = (input()).split(" ")
         x, y = nums[0], nums[1]
-        print(max(r(x, y), b(x, y), c(x, y)))
+        print(maior(x,y))
 
 
 
